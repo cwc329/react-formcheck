@@ -1,30 +1,6 @@
 import { useEffect } from 'react';
-import styled from 'styled-components';
 import Form from './components/Form';
-
-const AppWrapper = styled.div`
-  box-sizing: border-box;
-  max-width: 645px;
-  box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
-  background-color: #ffffff;
-  border-top: solid 8px #fad312;
-  margin: 120px auto 60px auto;
-  padding: 35px 45px;
-
-  @media(max-width: 768px) {
-    align-self: center;
-    margin: 0px auto 60px auto;
-    padding: 35px 25px;
-    box-shadow: none;
-    border: solid 1px rgba(0, 0, 0, 0.3);
-    border-top: solid 8px #fad312;
-  }
-`
-
-const StyledSpan = styled.span`
-  color: #e74149;
-  font-weight: bold;
-`
+import { AppWrapper, StyledSpan} from './components/StyledComponents'
 
 function App() {
 

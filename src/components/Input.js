@@ -1,30 +1,7 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
 import { HandlersContext } from './Form';
-
-const SpanRed = styled.span`
-  color: #e74149;
-  font-weight: bold;
-`
-
-export const SpanErrorMessage = styled(SpanRed)`
-  display: inline-block;
-  height: 1rem;
-`
-
-const StyledInput = styled.input`
-  width: 287px;
-  height: 23px;
-  border: solid 1px #d0d0d0;
-  font-weight: 300;
-  ${({type}) => type === 'submit' && `
-    width: 92px;
-    height: 40px;
-    border-radius: 3px;
-    background-color: #fad312;
-    font-size: 15px;
-  `}
-`
+import { StyledSpan, StyledInput, SpanErrorMessage} from './StyledComponents'
 
 export default function Input({ input }) {
 
@@ -36,7 +13,7 @@ export default function Input({ input }) {
     return (
       <h2>
         {title}
-        {required ? <SpanRed>*</SpanRed> : ''}
+        {required ? <StyledSpan>*</StyledSpan> : ''}
       </h2>
     )
   }
@@ -71,6 +48,7 @@ export default function Input({ input }) {
             onChange={handleChange}
           />
       }
+      <div>{input.warningMessage ? <SpanErrorMessage>{input.warningMessage}</SpanErrorMessage> : ''}</div>
       <div><SpanErrorMessage>{input.errorMessage}</SpanErrorMessage></div>
     </div>
   )

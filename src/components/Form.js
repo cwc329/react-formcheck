@@ -1,5 +1,4 @@
 import { useState, useEffect, createContext } from 'react';
-import styled from 'styled-components';
 import Input from './Input';
 import useInputs from '../useInput';
 
@@ -19,10 +18,6 @@ export default function Form() {
     })
     alert(alertMessage);
   }
-
-  useEffect(() => {
-    //console.log(inputs)
-  }, [inputs])
 
   return (
     <HandlersContext.Provider value={handlers}>
