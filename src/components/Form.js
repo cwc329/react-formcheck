@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext } from 'react';
+import { createContext } from 'react';
 import Input from './Input';
 import useInputs from '../useInput';
 

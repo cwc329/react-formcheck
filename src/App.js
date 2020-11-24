@@ -1,12 +1,7 @@
-import { useEffect } from 'react';
 import Form from './components/Form';
 import { AppWrapper, StyledSpan} from './components/StyledComponents'
 
 function App() {
-
-  useEffect(() => {
-
-  }, [])
   return (
     <AppWrapper className="App">
       <h1>新拖延運動報名表單</h1>
